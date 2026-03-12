@@ -11,6 +11,10 @@ const usuarioSchema = new mongoose.Schema({
   },
   edad: {
     type: Number
+  },
+  password: {
+    type: String,
+    required: true
   }
 });
 
