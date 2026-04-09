@@ -7,7 +7,8 @@ const usuarioSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   edad: {
     type: Number
@@ -15,6 +16,11 @@ const usuarioSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  rol: {
+    type: String,
+    enum: ["user", "admin"],
+    default: "user"
   }
 });
 
